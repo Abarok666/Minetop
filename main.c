@@ -17,7 +17,7 @@
 #define TURN_RIGHT 'D'
 
 #define SET_BLOCK '\n' //enter
-#define DELETE_BLOCK 127
+#define DELETE_BLOCK 127 //backspace
 #define SELECT_BLOCK 'e'
 #define BLOCK_SOLID '1'
 #define BLOCK_TR_FG '2'
@@ -208,7 +208,7 @@ int main ()
 		}
 		
 		draw_map(coords, map);
-		debug(coords);		
+		//debug(coords);		
 		
 	}
 
