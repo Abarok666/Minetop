@@ -17,7 +17,8 @@
 #define TURN_RIGHT 'D'
 
 #define SET_BLOCK '\n' //enter
-#define DELETE_BLOCK 127 //backspace
+#define DELETE_BLOCK 7 //backspace
+#define DELETE_BLOCK_ALT 127 //delete
 #define SELECT_BLOCK 'e'
 #define BLOCK_SOLID '1'
 #define BLOCK_TR_FG '2'
@@ -176,7 +177,8 @@ int main ()
 			break;
 			case SET_BLOCK: map = set_block(curr_block, coords, map);
 			break;
-			case DELETE_BLOCK: map = delete_block(coords, map);
+                        case DELETE_BLOCK:
+			case DELETE_BLOCK_ALT: map = delete_block(coords, map);
 			break;
 			case SELECT_BLOCK: curr_block.sym = getchar();
 			break;
